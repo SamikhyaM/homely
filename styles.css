@@ -1,8 +1,8 @@
-/* Reset & Base */
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: 'Comic relief';
-    background-image: url(hatching3.png);
+    background-image: url(hatching3.PNG);
     background-repeat: repeat; /* repeat to fill */
     background-position: 0 0;
     animation: bgScroll 10s linear infinite;
@@ -21,13 +21,13 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #2F5D50; /* accent green */
+    color: #2F5D50;
     font-weight: 500;
     font-size: 1rem;
 }
 
 nav a:hover {
-    color: #f0e0ad; /* hover accent yellow */
+    color: #f0e0ad;
 }
 
 /* Main Body Box */
@@ -35,7 +35,7 @@ main {
     max-width: 800px;
     margin: 3rem auto;
     padding: 2rem;
-    background-color: #fdfdfd; /* subtle difference from page bg */
+    background-color: #fdfdfd;
     border: 1px solid #eee;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -63,10 +63,10 @@ main p {
 }
 #choices {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 15px; /* spacing between buttons */
-  justify-items: center; /* centers buttons in each cell */
-  align-items: center; /* optional, vertically centers content in each cell */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 15px;
+  justify-items: center; 
+  align-items: center; 
   margin-top: 20px;
 }
 @keyframes spin {
