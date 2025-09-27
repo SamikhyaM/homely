@@ -1,0 +1,84 @@
+/* Reset & Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Comic relief';
+    background-image: url(hatching3.png);
+    background-repeat: repeat; /* repeat to fill */
+    background-position: 0 0;
+    animation: bgScroll 10s linear infinite;
+    color: #331E1D;
+}
+
+/* Nav Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    background-color: #fafafa;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2F5D50; /* accent green */
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #f0e0ad; /* hover accent yellow */
+}
+
+/* Main Body Box */
+main {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #fdfdfd; /* subtle difference from page bg */
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+main h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+main p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.tiny {
+    font-size: 7px;
+}
+
+#result-img {
+    display: block;
+    margin: 20px auto 0;
+    animation: spin 1s linear;
+}
+#choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 15px; /* spacing between buttons */
+  justify-items: center; /* centers buttons in each cell */
+  align-items: center; /* optional, vertically centers content in each cell */
+  margin-top: 20px;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bgScroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 200px;
+  }
+}
