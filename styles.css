@@ -2,13 +2,12 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: 'Comic relief';
-    background-image: url(hatching3.PNG);
+    background-image: url('hatching3.PNG');
     background-repeat: repeat; /* repeat to fill */
     background-position: 0 0;
     animation: bgScroll 10s linear infinite;
     color: #331E1D;
 }
-
 /* Nav Bar */
 nav {
     display: flex;
@@ -69,6 +68,25 @@ main p {
   align-items: center; 
   margin-top: 20px;
 }
+
+.errors{
+  text-align: center;
+  justify-items: center; 
+  align-items: center; 
+  margin: 20px;
+}
+
+.right{
+  align-items: end;
+  margin-right: 50%;
+  font-size: 20px;
+}
+.logo{
+  height: 50px;
+}
+
+
+
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

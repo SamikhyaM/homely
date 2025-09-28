@@ -1,14 +1,4 @@
 // ~~~~~~~~~~~Sounds~~~~~~~~~~~~
-const clickSoundNav = new Audio('ding1.wav');
-clickSoundNav.preload = "auto";
-const navLinks = document.querySelectorAll('.nav-link');
-navLinks.forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    clickSoundNav.currentTime = 0;
-    clickSoundNav.play();
-  });
-});
 
 
 const clickSoundOption = new Audio('shortDing.mp3');
@@ -299,11 +289,11 @@ const resultDescriptions = {
     "microwave": "You're a part of the kitchen alongside the blender! You're reliable and kind, and you value doing the right thing. Others enjoy being in your company.",
     "rug": "You're a part of the livingroom alongside the plant and occasionally the lamp and clock! You value privacy and being self reliant is important to you! Even though sometimes it's hard for others to tell what you think, your contributions are always appreciated.",
     "fan": "You're a part of the bedroom alongside the shelf and occasionally the lamp and clock! Getting things done and doing your job is important to you and, just like a fan, you try your best to finish in a timely manner.",
-    "plant": "You're a part of the livingroom alongside the rug and occasionally the lamp and clock! You value humor and having fun when going about your day. You always find a way to entertain others.",
-    "blender": "You're a part of the kitchen alongside the microwave! Your sometimes loud but completely vibrant personality makes you fun to be around! You value your relationships with others and you're a people-person.",
-    "lamp": "You're a part of the livingroom and the bedroom at times. Seeing you work hard and give it your all always makes other people look up to you. You value consistency since you believe that it'll help you achive your goals!",
+    "plant": "You're a part of the living room alongside the rug and occasionally the lamp and clock! You value humor and having fun when going about your day. You always find a way to entertain others.",
+    "blender": "You're a part of the kitchen alongside the microwave! Your sometimes loud and completely vibrant personality makes you fun to be around! You value your relationships with others and you're a people-person.",
+    "lamp": "You're a part of the living room and the bedroom at times. Seeing you work hard and give it your all always makes other people look up to you. You value consistency since you believe that it'll help you achive your goals!",
     "shelf": "You're a part of the bedroom alongside the fan and occasionally the lamp and clock! You're always on the lookout to help others, and everyone enjoys spending time with you!",
-    "clock": "You're a part of the livingroom and the bedroom at times. You value knowledge and understanding, and you often find yourself spending your free time learning new things."
+    "clock": "You're a part of the living room and the bedroom at times. You value knowledge and understanding, and you often find yourself spending your free time learning new things."
 };
 
 function showResults() {
@@ -353,4 +343,25 @@ function showResults() {
 //Start
 window.onload = () => renderState(currentState);
 
+//----------error image-------------
 
+function errorShowing(){
+  const errorIndex = Math.floor(Math.random() * 7);
+  const errorImage = document.createElement('img');
+  errorImage.id = 'error-img';
+  errorImage.src = `errorImg/${errorIndex}.png`;
+  errorImage.alt = "error Image";
+  errorImage.style.width = '200px';
+  errorImage.style.marginTop = '20px';
+  const container = document.getElementById('error-container');
+  container.innerHTML = ""; // clear previous if any
+  container.appendChild(errorImage);
+}
+
+window.onload = () => {
+  if (document.getElementById("error-container")) {
+    errorShowing();
+  } else {
+    renderState(currentState);
+  }
+};
